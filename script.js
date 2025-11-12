@@ -188,7 +188,7 @@ let visibleBatch = 0;
 
 function selectAnimation(animNumber)
 {
-   if(animNumber == 1) return "scaleInAnim";
+   if(animNumber == 1) return "rotateXAnim";
    else if(animNumber == 2) return "rotateYAnim";
    else return "slideDownAnim";
 
@@ -213,8 +213,8 @@ function showMoreCards() {
     const listItem = document.createElement("div");
     listItem.classList.add("grid", "pokeCard");
     if(pokeIndex % 2) listItem.classList.add(selectAnimation(1));
-    else if(pokeIndex % 3) listItem.classList.add(selectAnimation(2));
-         else listItem.classList.add(selectAnimation(0));
+    // else if(pokeIndex % 3) listItem.classList.add(selectAnimation(2));
+         else listItem.classList.add(selectAnimation(2));
 
     
       // Error message - Checking if div has any children, if not, show error
