@@ -213,7 +213,8 @@ function showMoreCards() {
     const listItem = document.createElement("div");
     listItem.classList.add("grid", "pokeCard");
     if(pokeIndex % 2) listItem.classList.add(selectAnimation(1));
-    else listItem.classList.add(selectAnimation(2));
+    else if(pokeIndex % 3) listItem.classList.add(selectAnimation(2));
+         else listItem.classList.add(selectAnimation(0));
 
     
       // Error message - Checking if div has any children, if not, show error
