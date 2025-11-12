@@ -191,7 +191,7 @@ showMoreButton.classList.add(selectAnimation(1));
 let cardBatch = 6;
 let visibleBatch = 0;
 
-let user = "Eridn";
+let user = "E2rin";
 
 function selectAnimation(animNumber)
 {
