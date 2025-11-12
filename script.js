@@ -182,7 +182,7 @@ const gridContainer = document.querySelector("#gridContainer");
 // Get show more button
 
 const  heading = document.querySelector("h1");
-heading.classList.add(selectAnimation(1));
+heading.classList.add(selectAnimation(user.animHeading));
 
 const showMoreButton = document.querySelector("#showMoreButton");
 showMoreButton.classList.add(selectAnimation(1));
@@ -191,7 +191,23 @@ showMoreButton.classList.add(selectAnimation(1));
 let cardBatch = 6;
 let visibleBatch = 0;
 
-let user = "E2rin";
+const userErinSettings = 
+{
+   animHeading : 2,
+   animPoke : 0
+   
+};
+
+const userHaraldSetting =
+{ 
+    animHeading : 1,
+    animPoke: 2
+};
+
+let user = userErinSettings;  // this can change to userHaraldSettings
+
+
+
 
 function selectAnimation(animNumber)
 {
@@ -219,10 +235,8 @@ function showMoreCards() {
     // Create card div
     const listItem = document.createElement("div");
     listItem.classList.add("grid", "pokeCard");
-    if(user === "Erin") listItem.classList.add(selectAnimation(1));
+    listItem.classList.add(selectAnimation(user.animPoke));
     // else if(pokeIndex % 3) listItem.classList.add(selectAnimation(2));
-     else listItem.classList.add(selectAnimation(2));
-
     
       // Error message - Checking if div has any children, if not, show error
       const errorDiv = document.querySelector("#errorDiv");
