@@ -193,6 +193,7 @@ h3 {
 }
 
 .rotateYAnim {
+  color:blue;
   animation-name : rotateY;
   animation-duration: 1s;
   animation-timing-function: ease-in;
