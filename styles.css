@@ -212,6 +212,20 @@ h3 {
   }
 }
 
+.scaleInAnim {
+  animation-name: scaleIn;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0, 0);}
+  5% { transform: scale(0.2, 0.2);}
+  30% { transform: scale(1, 0);}
+  100% {transform : scale(1, 1) ;}
+}
+
 /* Grid Sections */
 .gridImg {
   grid-area: gridImg;
