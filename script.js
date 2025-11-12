@@ -204,10 +204,12 @@ const userHaraldSetting =
     animPoke: 2
 };
 
-let user = userErinSettings;  // this can change to userHaraldSettings
 
-
-
+function getUserSettings(userId)
+{
+  if(userId == "Erin") return userErinSettings;
+  else return userHaraldSetting;
+}
 
 function selectAnimation(animNumber)
 {
@@ -224,11 +226,13 @@ function showMoreCards() {
   // Instead of referencing the whole array, reference this which cuts out a slice of 6 from the array
   const arrayBatch = pokeFacts.slice(visibleBatch, visibleBatch + cardBatch);
 
+  user = getUserSettings("Erin");
   // Let the variable pokeIndex start at the value 0; then if pokeIndex value is less than the length of pokeFacts; increase the value of pokeIndex by 1
   for ( let pokeIndex = 0; pokeIndex < arrayBatch.length; pokeIndex++) {
     const pokeMon = arrayBatch[pokeIndex];
     console.log(`---- Checking PokeCardsInfo Loop ----`);
     console.log(pokeMon.name);
+
 
     // Start building HTML elements
 
