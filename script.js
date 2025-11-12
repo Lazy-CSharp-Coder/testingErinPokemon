@@ -194,9 +194,10 @@ let visibleBatch = 0;
 
 function getUserSettings(userId)
 {
-  if(userId == "Erin") return  { animHeading : 2, animPoke : 0 };
-   else return {  animHeading : 1, animPoke: 2  };
-   
+  if(userId == "Erin") return  { animHeading : 2, animPoke : 0, font : "Times New Roman" }
+   else if(userId == "Harald") return { animHeading : 1, animPoke: 2, font : "Underdog"  }
+        else return { animHeading: 0, animPoke : 0, font : "Sans Serif"} ;  // default
+  
 }
 
 function selectAnimation(animNumber)
@@ -249,6 +250,7 @@ function showMoreCards() {
 
     // Get name
     const pokeName = document.createElement("h2");
+    pokeName.style.fontFamily = user.font;
     pokeName.textContent = pokeMon.name;
     pokeName.classList.add("gridName");
 
