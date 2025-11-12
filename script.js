@@ -189,6 +189,7 @@ let visibleBatch = 0;
 function selectAnimation(animNumber)
 {
    if(animNumber == 1) return "scaleInAnim";
+   else if(animNumber == 2) return "rotateYAnim";
    else return "slideDownAnim";
 
 }
@@ -211,7 +212,7 @@ function showMoreCards() {
     // Create card div
     const listItem = document.createElement("div");
     listItem.classList.add("grid", "pokeCard");
-    if(pokeindex % 2) listItem.classList.add(selectAnimation(1));
+    if(pokeIndex % 2) listItem.classList.add(selectAnimation(1));
     else listItem.classList.add(selectAnimation(2));
 
     
