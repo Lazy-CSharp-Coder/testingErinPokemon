@@ -186,6 +186,13 @@ const showMoreButton = document.querySelector("#showMoreButton");
 let cardBatch = 6;
 let visibleBatch = 0;
 
+function selectAnimation(animNumber)
+{
+   if(animNumber == 1) return "scaleInAnim";
+   else return "slideDownAnim";
+
+}
+
 // Show more? Set up the function that controls how many show, the loop should be in this function
 function showMoreCards() {
  
@@ -203,8 +210,8 @@ function showMoreCards() {
 
     // Create card div
     const listItem = document.createElement("div");
-    listItem.classList.add("grid", "pokeCard");
-
+    listItem.classList.add("grid", "pokeCard", selectAnimation(1));
+    
       // Error message - Checking if div has any children, if not, show error
       const errorDiv = document.querySelector("#errorDiv");
       console.log(errorDiv);
@@ -215,7 +222,7 @@ function showMoreCards() {
       }
 
     listItem.style.opacity = "0";
-    listItem.style.animationDelay = (pokeIndex * .1) + "s";
+    // listItem.style.animationDelay = (pokeIndex * .1) + "s";
 
     // Get sprite
     const pokeSprite = document.createElement("img");
