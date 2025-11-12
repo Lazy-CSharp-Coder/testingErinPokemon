@@ -182,7 +182,7 @@ const gridContainer = document.querySelector("#gridContainer");
 // Get show more button
 
 const  heading = document.querySelector("h1");
-heading.classList.add(selectAnimation(user.animHeading));
+heading.classList.add(selectAnimation(1));
 
 const showMoreButton = document.querySelector("#showMoreButton");
 // showMoreButton.classList.add(selectAnimation());
