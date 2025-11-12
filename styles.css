@@ -226,6 +226,23 @@ h3 {
   }
 }
 
+.rotateXAnim {
+
+  animation-name : rotateX;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotateX
+{
+   0% { transform:rotateX(90deg);}
+   100% { transform: rotateX(0 deg);}
+}
+
+
+
+/* 
 .scaleInAnim {
   animation-name: scaleIn;
   animation-duration: 1s;
@@ -238,7 +255,7 @@ h3 {
   5% { transform: scale(0.2, 0.2);}
   30% { transform: scale(1, 0);}
   100% {transform : scale(1, 1) ;}
-}
+} */
 
 /* Grid Sections */
 .gridImg {
