@@ -210,7 +210,10 @@ function showMoreCards() {
 
     // Create card div
     const listItem = document.createElement("div");
-    listItem.classList.add("grid", "pokeCard", selectAnimation(1));
+    listItem.classList.add("grid", "pokeCard");
+    if(pokeindex % 2) listItem.classList.add(selectAnimation(1));
+    else listItem.classList.add(selectAnimation(0));
+
     
       // Error message - Checking if div has any children, if not, show error
       const errorDiv = document.querySelector("#errorDiv");
@@ -221,12 +224,12 @@ function showMoreCards() {
         errorDiv.classList.add("flex");
       }
 
-    listItem.style.opacity = "0";
-    // listItem.style.animationDelay = (pokeIndex * .1) + "s";
+    // listItem.style.opacity = "0";
+    listItem.style.animationDelay = (pokeIndex * .1) + "s";
 
     // Get sprite
     const pokeSprite = document.createElement("img");
-    pokeSprite.src = pokeMon.imgSrc;
+    // pokeSprite.src = pokeMon.imgSrc;
     pokeSprite.classList.add("gridImg");
 
     // Get name
@@ -245,7 +248,7 @@ function showMoreCards() {
 
       // Create img element for types
       const pokeTypeImg = document.createElement("img");
-      pokeTypeImg.src = pokeType[typeArray];
+      // pokeTypeImg.src = pokeType[typeArray];
 
       // Append types img element
       typesDiv.appendChild(pokeTypeImg);
