@@ -185,7 +185,7 @@ const  heading = document.querySelector("h1");
 heading.classList.add(selectAnimation(user.animHeading));
 
 const showMoreButton = document.querySelector("#showMoreButton");
-showMoreButton.classList.add(selectAnimation(1));
+// showMoreButton.classList.add(selectAnimation());
 
 // Show more?
 let cardBatch = 6;
@@ -226,7 +226,7 @@ function showMoreCards() {
   // Instead of referencing the whole array, reference this which cuts out a slice of 6 from the array
   const arrayBatch = pokeFacts.slice(visibleBatch, visibleBatch + cardBatch);
 
-  user = getUserSettings("Erin");
+  const user = getUserSettings("Erin");
   // Let the variable pokeIndex start at the value 0; then if pokeIndex value is less than the length of pokeFacts; increase the value of pokeIndex by 1
   for ( let pokeIndex = 0; pokeIndex < arrayBatch.length; pokeIndex++) {
     const pokeMon = arrayBatch[pokeIndex];
