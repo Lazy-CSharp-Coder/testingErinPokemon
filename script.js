@@ -191,6 +191,9 @@ showMoreButton.classList.add(selectAnimation(1));
 let cardBatch = 6;
 let visibleBatch = 0;
 
+let user = "Erin";
+
+
 function selectAnimation(animNumber)
 {
    if(animNumber == 1) return "rotateXAnim";
@@ -217,9 +220,9 @@ function showMoreCards() {
     // Create card div
     const listItem = document.createElement("div");
     listItem.classList.add("grid", "pokeCard");
-    if(pokeIndex % 2) listItem.classList.add(selectAnimation(1));
+    if(user === "Erin") listItem.classList.add(selectAnimation(1));
     // else if(pokeIndex % 3) listItem.classList.add(selectAnimation(2));
-         else listItem.classList.add(selectAnimation(2));
+     else listItem.classList.add(selectAnimation(2));
 
     
       // Error message - Checking if div has any children, if not, show error
