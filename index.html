@@ -1,56 +1,52 @@
 <!DOCTYPE html>
-<html lang="no">
-  <!-- head  = informasjon til nettleser -->
+<html lang="en">
   <head>
-    <title>Hjem</title>
-    <link href="Icons/code.png" rel="icon" type="image/png" />
+    <title>Spooky Pokémon</title>
+    <link href="assets/favicoboo.png" rel="icon" type="image/png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <!-- External files -->
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
-  <!-- Body = Informasjon til nettsiden -->
+
   <body>
-    <header>
-      <!-- Logo, bedriftsnavn, navigasjon, temabytter, søkefelt, SoMe -->
-      <img class="logoheader" src="Icons/logoheader.png" alt="fant ikke icon" />
-      
+    <!-- HEADER -->
+    <header class="flex header">
+      <img class="pokegif" src="/assets/anim/0710Pumpkaboo.gif" alt="animated pumpkaboo">
+      <img class="pokegif litwick" src="/assets/anim/0607Litwick.gif" alt="animated Litwick">
+      <img class="pokegif" src="/assets/anim/0092Gastly.gif" alt="animated Gastly">
+      <img class="pokegif haunter" src="/assets/anim/0093Haunter.gif" alt="animated Haunter">
     </header>
 
-    <main>
-      <!-- Hovedinnhold: introduksjon, produkt, fremvisning -->
-      <section id="hjem" class="hero">
-        <!-- Hero / Main / Home -->
-        <h1>Hero - hovedoverskrift</h1>
-      </section>
-      <section id="om">
-        <h2>underoveskrift seksjon 2</h2>
-      </section>
-      <section id="produkt">
-        <h2>underoverskrif seksjon 3</h2>
+    <!-- MAIN BODY -->
+    <main class="main">
+      <!-- SECTIONS -->
+      <section id="main" class="flex center main">
+
+        <div class="titleBox">
+          <h1 class="titleText"><img src="/assets/anim/pumpkaboo-super.gif" alt="pumpkaboo"> Spooky Pokémon <img src="/assets/anim/pumpkaboo-super (1).gif" alt="pumpkaboo"></h1>
+        </div>
+
+        <div id="errorDiv" class="hide"><h3>The Pokémon got away!!</h3></div>
+
+        <div id="gridContainer" class="grid gridContainer">
+        </div>
+
+        <button id="showMoreButton" class="showMoreButton">Show More</button>
       </section>
     </main>
 
-    <footer>
-      <img
-        class="kodeloftlogo"
-        src="Icons/kodeloftalpha.png"
-        alt="fant ikke logo"
-      />
-      <div class="kreditasjonfooter">
-        <p class="footertext">Web-side utviklet av Harald Nydal</p>
-        <p class="footertext">Kodeloftet 1 - Gruppe 15</p>
-      </div>
-      <div class="emailandgithub">
-        <a href="mailto:haraldn.kodeloftet@gmail.com" target="_blank">
-          <img src="Icons/email.png" alt="fant ikke icon" />
-        </a>
-        <a href="https://github.com/Lazy-CSharp-Coder" target="_blank">
-          <img src="Icons/github.png" alt="fant ikke icon" />
-        </a>
-      </div>
+    <!-- FOOTER -->
+    <footer class="flex footer">
+      <h3>Credits</h3>
 
-      <!-- Logo, navigasjon, kreditasjon, betingelser (TOS - Terms of Service), søkefelt, SoME-->
+      <ul class="flex credits">
+        <li><b>Header Background:</b> <a href="https://www.freepik.com/free-vector/collection-flat-halloween-pattern_5160988.htm#position=11" target="_blank">Designed by Freepik</a></li>
+        <li><b>Striped Background:</b> <a href="https://heropatterns.com/" target="_blank"> https://heropatterns.com/</a></li>
+        <li><b>Pokemon Sprites:</b> <a href="https://github.com/PokeAPI/sprites" target="_blank">PokéAPI Sprites</a></li>
+        <li class="nintendo">Pokémon © 2002-2025 Pokémon. © 1995-2025 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon character names are trademarks of Nintendo.</li>
+      </ul>
     </footer>
   </body>
 </html>
