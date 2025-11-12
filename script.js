@@ -191,24 +191,12 @@ const showMoreButton = document.querySelector("#showMoreButton");
 let cardBatch = 6;
 let visibleBatch = 0;
 
-const userErinSettings = 
-{
-   animHeading : 2,
-   animPoke : 0
-   
-};
-
-const userHaraldSetting =
-{ 
-    animHeading : 1,
-    animPoke: 2
-};
-
 
 function getUserSettings(userId)
 {
-  if(userId == "Erin") return userErinSettings;
-  else return userHaraldSetting;
+  if(userId == "Erin") return  { animHeading : 2, animPoke : 0 };
+   else return {  animHeading : 1, animPoke: 2  };
+   
 }
 
 function selectAnimation(animNumber)
